@@ -24,7 +24,7 @@ function routes(req,res,cb){
     res.writeHead(200);
     cb(err,res);
     if(logger){
-        logger.log("connection:"+req.svr.port+" requesting:"+req.url);
+        logger.log("connection:"+req.svr.sckt+" requesting:"+req.url);
     }
 };
     
