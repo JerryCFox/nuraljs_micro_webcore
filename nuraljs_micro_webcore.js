@@ -21,10 +21,10 @@ function init(options,cb){
 };
 
 function routes(req,res,cb){
+    if(logger){
+        logger.log("conn:"+req.svr.sckt+" req:"+req.url);
+    }
     res.writeHead(200);
     cb(err,res);
-    if(logger){
-        logger.log("connection:"+req.svr.sckt+" requesting:"+req.url);
-    }
 };
     
