@@ -1,17 +1,12 @@
 module.exports.init=init;
 module.exports.routes=routes;
 
-var auth;
-var logger;
 var err=null;
 
 function init(options,cb){
     if(options){
         if(options.auth){
             auth=options.auth;
-        }
-        if(options.logger){
-            logger=options.logger;
         }
         cb(err,"Webcore Enabled");
     }
@@ -21,11 +16,11 @@ function init(options,cb){
 };
 
 function routes(req,res,cb){
+    res.writeHead(200);
+    cb(err,res);
     console.log(req);
     if(logger){
         logger.log(req);
     }
-    res.writeHead(200);
-    cb(res);
 };
     
