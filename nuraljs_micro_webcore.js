@@ -13,6 +13,7 @@ function init(options,cb){
         if(options.logger){
             logger=options.logger;
         }
+        cb(err,"Webcore Enabled");
     }
     else{
         cb(err,"Webcore Init without Auth");
