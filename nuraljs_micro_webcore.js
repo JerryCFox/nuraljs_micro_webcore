@@ -20,10 +20,12 @@ function init(options,cb){
     }
 };
 
-function routes(req,res){
+function routes(req,res,cb){
     console.log(req);
     if(logger){
         logger.log(req);
     }
+    res.writeHead(200);
+    cb(res);
 };
     
