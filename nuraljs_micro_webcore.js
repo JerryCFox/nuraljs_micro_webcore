@@ -21,6 +21,7 @@ function init(options,cb){
 };
 
 function routes(req,res){
+    console.log(req);
     if(logger){
         logger.log(req);
     }
