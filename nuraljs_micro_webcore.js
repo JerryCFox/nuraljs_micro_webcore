@@ -25,12 +25,12 @@ function routes(req,res,cb){
         logger.log("conn:"+req.svr.sckt+" req:"+req.url);
     }
     res.writeHead(200);
-    if(bmpenabled){
-        bmp.getPressure(function(d) {
-            res.write("Temperature: " + d.temperature + " C");
-            cb(err,res);
-        });
-    }
+    //if(bmpenabled){
+    //    bmp.getPressure(function(d) {
+    //        res.write("Temperature: " + d.temperature + " C");
+    //        cb(err,res);
+    //    });
+    //}
     else{
         cb(err,res);
     }
