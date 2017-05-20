@@ -31,8 +31,8 @@ function routes(req,res,cb){
     //        cb(err,res);
     //    });
     //}
-    else{
+    //else{
         cb(err,res);
-    }
+    //}
 };
     
